@@ -35,6 +35,17 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/qianyue-wei-065120193/
 
+nav:
+  - 介绍: index.md
+  - 安装:
+      - 本地环境搭建: page2.md
+      - 发布至GitHub Pages: page2.md
+      - 发布至自己的HTTP Server: install/page3.md
+  - 语法:
+      - 语法总览: syntax/main.md
+      - 标题: syntax/headline.md
+      - 段落: syntax/paragraph.md
+
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
