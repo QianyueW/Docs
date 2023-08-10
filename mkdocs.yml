@@ -64,5 +64,8 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
 
+plugins:
+  - glightbox
+  
 copyright: |
   &copy; 2023 <a href="https://github.com/QianyueW"  target="_blank" rel="noopener">Qianyue Wei</a>

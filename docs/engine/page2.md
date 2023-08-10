@@ -14,7 +14,7 @@
     - Message sending and handling 消息发送和处理
     - Decoupling event sending and handling 解耦事件发送和处理
 
-5. Scene Mangement 场景管理
+5. **Scene Mangement** 场景管理
    ![Spatial Data structures](../pictures/Spatial data structures.png)
 
 ##### 本章小结：

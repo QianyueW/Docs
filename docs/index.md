@@ -9,7 +9,7 @@
 7. 引擎的资料收集【YouTube，B站，ilearning，google，bing, 知乎，书本, github源码仓】
 8. 组内培训资料的学习【共享文件夹，wiki，团队空间资料】
 9. Confluence平台探索学习
-10. 引擎源码阅读：unreal, unity, cryengine, 寒霜引擎，Source (game engine)，Piccolo Engine，rage, godot, ǑDE, TORQUE, STRIDE, hazel, filament, Snowdrop引擎
+10. 引擎源码阅读：Quake, unreal, unity, cryengine, 寒霜引擎，Source (game engine)，Piccolo Engine，rage, godot, ǑDE, TORQUE, STRIDE, hazel, filament, Snowdrop引擎, Naughty Dog; well-known middleware packages: Havok Physics library, the OGRE rendering engine, Rad Game Tools' Granny 3D animation and geometry management toolkit.
 11. 延伸阅读：《系统复杂之美》《游戏引擎架构》
 
 
