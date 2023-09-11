@@ -1,0 +1,974 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../algorithm/linkedlist/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.0">
+    
+    
+      
+        <title>待整理信息 - Qianyue's Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.046329b4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.85d0ee34.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="Qianyue&#39;s Docs" class="md-header__button md-logo" aria-label="Qianyue's Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Qianyue's Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              待整理信息
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Homepage
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../engine/page1/" class="md-tabs__link">
+          
+  
+  游戏引擎技术
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../algorithm/main/" class="md-tabs__link">
+          
+  
+  算法与数据结构
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+    
+  
+  待整理信息
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Qianyue&#39;s Docs" class="md-nav__button md-logo" aria-label="Qianyue's Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Qianyue's Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Homepage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    游戏引擎技术
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            游戏引擎技术
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engine/page1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    引擎基础架构
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engine/page2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    游戏世界构成
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engine/page3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Render
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engine/4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EGA读书笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    算法与数据结构
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            算法与数据结构
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithm/main/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    编程题目总览
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithm/linkedlist/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    链表
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    待整理信息
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    待整理信息
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    Git常用命令
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adb" class="md-nav__link">
+    ADB工具
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#digital-content-creation-tools-ta-related" class="md-nav__link">
+    Digital Content Creation Tools &amp; TA related
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#profling-tools" class="md-nav__link">
+    profling tools性能调试工具：
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    相关好文
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    工作小札
+  </a>
+  
+    <nav class="md-nav" aria-label="工作小札">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    如何优化内存使用情况
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpu" class="md-nav__link">
+    如何优化CPU的占用情况：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    如何优化锯齿的问题：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other" class="md-nav__link">
+    Other
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="_1">待整理信息</h1>
+<h2 id="git">Git常用命令</h2>
+<p>Git log --reverse --oneline
+Git log --graph --oneline
+Git checkout <commitid>
+Git checkout master</p>
+<h2 id="adb">ADB工具</h2>
+<p>adb shell dumpsys meminfo + 你的demo进程的包名</p>
+<h2 id="digital-content-creation-tools-ta-related">Digital Content Creation Tools &amp; TA related</h2>
+<p>https://renderguide.com/daz3d-filament-tutorial/ TA快乐老家可用来学Blender
+https://www.khronos.org/api/index_2017/ktx
+https://registry.khronos.org/KTX/specs/2.0/ktxspec.v2.html</p>
+<h2 id="profling-tools">profling tools性能调试工具：</h2>
+<p>• Intel's VTune,
+• IBM's Quantify and Purify (part of the PurifyPlus tool suite),
+• Insure++ by Parasoft, and
+• Valgrind by Julian Seward and the Valgrind development team.</p>
+<h2 id="_2">相关好文</h2>
+<p>https://www.cnblogs.com/dins/p/tu-pian-de-jie-ya-suo-xuan-ran.html
+https://zhuanlan.zhihu.com/p/357265599</p>
+<h2 id="_3">工作小札</h2>
+<ul>
+<li>
+<p>虹彩特性合入当前的引擎框架</p>
+</li>
+<li>
+<p>运动模糊后处理特性的开发</p>
+</li>
+<li>
+<p>其他-OIT透明渐变方案，灯光排除功能实现，动画系统问题定位。。</p>
+</li>
+</ul>
+<h3 id="_4">如何优化内存使用情况</h3>
+<p>一、从模型资源入手
+1. 降低模型面数
+2. 实例化</p>
+<blockquote>
+<p>用renderdocs来检查gltf中是否存在重复的几何数据，如有可以使用实例化的技术来降低内存的使用。实例化是一种技术，在场景中渲染同一对象（网格）的多个副本，但它们不是将每个副本存储为单独的对象，而是将它们都存储为单个实例。
+3. 贴图转ktx2
+4. 降低贴图分辨率，尽可能选择小的贴图
+5. 拆分复杂贴图，复杂的贴图要拆分来评估其大小
+6. 减少不必要的贴图使用，纯色的话就没有必要使用贴图
+二、从引擎内存管理系统入手：？？？</p>
+</blockquote>
+<h3 id="cpu">如何优化CPU的占用情况：</h3>
+<ol>
+<li></li>
+</ol>
+<h3 id="_5">如何优化锯齿的问题：</h3>
+<h3 id="other">Other</h3>
+<ul>
+<li>https://www.cnblogs.com/skiwnchiwns/p/10121763.html</li>
+<li>https://mengzephyr.com/</li>
+<li>http://geometry.cs.ucl.ac.uk/index.php</li>
+<li>https://enigma-li.github.io/</li>
+<li>https://www.youtube.com/@cggcseminar6533</li>
+<li>http://kunzhou.net/</li>
+<li>https://zhuanlan.zhihu.com/p/435927070</li>
+<li>https://leetcode.cn/circle/article/mggm6Q/</li>
+<li>https://en.cppreference.com/w/</li>
+<li>https://github.com/FlaxEngine/FlaxEngine</li>
+</ul>
+<p>https://doc.magnum.graphics/magnum/examples-motionblur.html</p>
+<p>【碎片信息】</p>
+<p>webGPU：https://www.youtube.com/watch?v=oWwtCDv3Pgg</p>
+<p>Unity 2023: https://www.youtube.com/watch?v=kUDUM3BtXtU</p>
+<p>Intel: https://www.intel.com/content/www/us/en/developer/topic-technology/gamedev/overview.html</p>
+<p>https://game.intel.com/story/intel-arc-graphics-game-dev-all-access-2023-ray-tracing/</p>
+<p>《3D数学基础：图形和游戏开发》—— 图形学相关的数学内容，可以用来打底子或是复习</p>
+<p>《Fundamentals of Computer Graphics》, Forth Edition —— 虎书，图形学入门经典材料</p>
+<p>《计算机图形学（第四版）》</p>
+<p>《introduction to 3D Game Programming with DiecrtX 12》—— 某乎安利，用于学习常用的图形架构</p>
+<p>《Real-Time-Rendering》, Forth Edition —— 实时渲染领域的圣经，可以搭配Games202和毛星云大佬提炼的该书籍的学习笔记一起食用</p>
+<p>《Practical Rendering &amp; Computation with Direct3D 11》—— 实时渲染实战</p>
+<p>《Physically Based Rendering》, Third Edition —— 离线渲染领域的圣经，可以搭配Games201一起食用</p>
+<p>《COMPUTER GRAPHICS: PRINCIPLES AND PRACTICE》, 3RD EDITION —— 课外读物</p>
+<p>《WebGL编程指南》—— 通俗易懂搞懂图形渲染管线</p>
+<p>《C++ Primer》—— C++从入门到入土</p>
+<p>opengl红宝石书，可以搭配配套示例代码食用 GitHub - openglredbook/examples: Examples for the OpenGL Red Book</p>
+<p>《OpenGL学习指南》第9版</p>
+<p>《OpenGL programming guide》</p>
+<p>《OpenGL编程权威指南》</p>
+<p>《Vulkan学习指南》《Vulkan应用开发指南》</p>
+<p>The Book of Shaders —— 着色器编程指南</p>
+<p>《游戏引擎架构》——叶劲峰译</p>
+<p>《GPU Gems 1-3》</p>
+<p>《GPU Pro 1-7》</p>
+<p>《GPU Zen》</p>
+<p>实时渲染高级特性开发：https://zhuanlan.zhihu.com/p/151301323</p>
+<p>渲染顺序：https://sunra.top/2022/07/24/unity-render-pipeline-12/</p>
+<p>￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥</p>
+<p>相关从业人员：【除了可以学习他们的CG知识分享，还可以思考他们增加互联网影响力的方式】</p>
+<p>￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥</p>
+<p>https://www.zhihu.com/people/tc130-52/following/columns</p>
+<p>https://sunra.top/2022/07/24/unity-render-pipeline-12/</p>
+<p>https://lijiankuan.github.io/</p>
+<p>https://www.zhihu.com/people/pastel_de_nata</p>
+<p>https://gwb.tencent.com/community/user/1037694</p>
+<p>http://www.ownself.org/blog/more</p>
+<p>http://www.ownself.org/blog/archives</p>
+<p>https://holko.pl/about/</p>
+<p>https://www.lfzxb.top/link/</p>
+<p>https://www.cnblogs.com/cheermyang/p/6383266.html</p>
+<p>https://github.com/keijiro</p>
+<p>https://radiumsoftware.tumblr.com/archive</p>
+<p>https://amplify.pt/</p>
+<p>http://nothkedev.blogspot.com/2018/10/correct-motion-blur-for-fast-rotating.html</p>
+<p>【学界论文】</p>
+<p>https://onlinelibrary.wiley.com/doi/10.1111/j.1467-8659.2010.01840.x【】</p>
+<p>UE</p>
+<p>GTA游戏展示：https://www.rockstargames.com/zh/gta-v?info=trailer</p>
+<p>UE光照技术：https://www.lunas.pro/news/lumen-ray-tracing.html</p>
+<p>【Lumen自动全局光照和反射系统】Lumen is a fully dynamic global illumination and reflections system designed for next generation consoles that operates by default in Unreal Engine 5.</p>
+<p>【RayTracing光线追踪】</p>
+<p>unity后处理效果：</p>
+<p>【如何检索一个后处理效果的实现方式？？Google (XXX图片检索 + XXXunity和UE code/源码 + XXX相关论文)】</p>
+<p>【B/Y 检索unity和UE提供怎么样的XXX，以及是否有其他实现的教程】</p>
+<p>【GitHub检索相关代码】</p>
+<p>Unity Learn教程Introduction to Post Processing Stack中文讲解</p>
+<p>课程资源链接：https://pan.baidu.com/s/1QOs8zWIRiGbd5w5t4UVM9Q 提取码:603i</p>
+<p>讲师：BeaverJoe</p>
+<p>https://www.bilibili.com/video/BV1SK4y187jj/?t=0h35m35s&amp;vd_source=4e9b1èc157aec6187è1b36ā4310ed</p>
+<p>https://www.bilibili.com/video/BV1B3411E7Gu/?spm_id_from=333.788&amp;vd_source=4e9b1èc157aec6187è1b36ā4310ed</p>
+<p>https://www.bilibili.com/video/BV1964y197t8/?spm_id_from=333.788.recommend_more_video.2&amp;vd_source=4e9b1èc157aec6187è1b36ā4310ed</p>
+<p>https://www.bilibili.com/video/BV1Gs4y1j7Yf/?spm_id_from=333.788.recommend_more_video.6&amp;vd_source=4e9b1èc157aec6187è1b36ā4310ed</p>
+<p>https://vga.zol.com.cn/228/2281769.html</p>
+<p>https://www.lfzxb.top/unity-shader-post-processing/#%E8%BF%90%E%8A%A8%E6%A8%Ā%E7%B3%8A</p>
+<p>https://www.irimsky.top/archives/301/https://www.blurredcode.com/2022/05/9f1444db/#%e7%94%bb%e9%9d%á%e%8f%98%e6%a8%ā%e7%b3%8a</p>
+<p>https://ubm-twvideo01.s3.amazonaws.com/ō/vault/gdc2016/Presentations/Pedersen_LasseJonFuglsang_TemporalReprojectionAntiAliasing.pdf</p>
+<p>静态模糊算法合集：https://zhuanlan.zhihu.com/p/125744132</p>
+<p>https://github.com/QianMo/X-PostProcessing-Library</p>
+<p>https://www.intel.com/content/www/us/en/developer/articles/technical/an-investigation-of-fast-real-time-gpu-based-image-blur-algorithms.html</p>
+<p>https://developer.nvidia.com/gpugems/gpugems3/part-iv-image-effects/chapter-27-motion-blur-post-processing-effect</p>
+<p>https://learnopengl.com/Advanced-Lighting/Bloom</p>
+<p>https://portal.productboard.com/unity/1-unity-platform-rendering-visual-effects/tabs/3-universal-pipeline</p>
+<p>https://docs.unity3d.com/Manual/PostProcessingOverview.html</p>
+<p>https://github.com/Unity-Technologies/PostProcessing/blob/v2/Documentation~/Motion-Blur.md</p>
+<p>https://www.youtube.com/watch?v=RlvvmiGtPQE</p>
+<p>PS 后处理效果实现:</p>
+<p>https://www.cnblogs.com/mtcnn/p/9412094.html</p>
+<p>https://blog.csdn.net/kezunhai/category_2747081.html</p>
+<p>写shader的骚操作：</p>
+<p>https://www.bilibili.com/video/BV16à11e7Ly/?spm_id_from=333.788.recommend_more_video.-1&amp;vd_source=4e9b1èc157aec6187è1b36ā4310ed</p>
+<p>https://juejin.cn/user/1292681404482840/posts</p>
+<p>https://github.com/WYM/cocos-creator-shaders</p>
+<p>https://www.codinblack.com/blur-shader-using-shader-graph-in-unity3d/</p>
+<p>[Universal Scene Description] https://www.bing.com/search?q=usd+format+3d&amp;qs=UT&amp;pq=usd+forma&amp;sk=CT1&amp;sc=10-9&amp;cvid=Ǎ54F1C3ED34429B9445C4C1DAEFB116&amp;FORM=QBRE&amp;sp=2&amp;lq=0</p>
+<p>https://github.com/ocornut/imgui</p>
+<p>https://github.com/miloyip/game-programmer</p>
+<p>https://www.cnblogs.com/miloyip/</p>
+<p>https://zhuanlan.zhihu.com/p/449623131</p>
+<hr />
+<p>【刷题题单】</p>
+<p>力扣全tag</p>
+<p>https://github.com/SharingSource/LogicStack-LeetCode/wiki/%E%9B%BE%E8%AE%BA-DFS</p>
+<p>https://www.programmercarl.com/%È%BA%8C%E%8F%89%E6%A0%91%E6%80%BB%E7%BB%93%E7%AF%87.html</p>
+<p>https://www.desgard.com/algo/docs/part3/ch02/1-segment-tree-rmq/</p>
+<p>【学习视频】</p>
+<p>c++ chreno 教程</p>
+<p>c++ codecamp 教程</p>
+<p>B站黑马程序员教程</p>
+<p>ilearning课程1,2,3</p>
+<p>【学习资料】</p>
+<p>《C++软件工程能力》《C++ Primer》</p>
+<hr />
+<p>待学习清单：</p>
+<p>图形学及渲染理论基础：GAMES101, GAMES其他学习资料；OpenGL等图形API的学习及glTF格式理解；可以开发各种shader in GLSL/CG...</p>
+<p>软件开发基础：C++编程能力和工程能力；Java编程能力和安卓开发能力；git等常用工具的使用</p>
+<hr />
+<ul>
+<li>https://blog.selfshadow.com/publications/s2012-shading-course/</li>
+<li>https://media.disneyanimation.com/uploads/production/publication_asset/48/asset/s2012_pbs_disney_brdf_notes_v3.pdf</li>
+<li>https://www.zhihu.com/column/c_1419375161635819520</li>
+<li>https://renderguide.com/daz3d-filament-tutorial/ TA快乐老家可用来学Blender</li>
+<li>https://www.khronos.org/api/index_2017/ktx</li>
+<li>https://registry.khronos.org/KTX/specs/2.0/ktxspec.v2.html</li>
+</ul>
+<p>c++推荐书籍：</p>
+<p>[36] Scott Meyers. Effective C++: 55 Specific Ways to Improve Your Programs and Designs,</p>
+<p>Third Edition. Reading, MA: Addison-Wesley, 2005.</p>
+<p>[37] Scott Meyers. More Effective C++: 35 New Ways to Improve Your Programs and Designs.</p>
+<p>Reading, MA: Addison-Wesley, 1996.</p>
+<p>[38]Bjarne Stroustrup. The C++ Programming Language, Special Edition (Third Edition).</p>
+<p>Reading, MA: Addison-Wesley, 2000.</p>
+<p>📚 RT RESOURCES (in order of complexity)</p>
+<p>Ray Tracing in One Weekend series ► https://raytracing.github.io</p>
+<p>Scratch a Pixel ► https://scratchapixel.com</p>
+<p>🔴 Physically Based Rendering: From Theory to Implementation ► https://amzn.to/3y2bGK7</p>
+<p>https://github.com/facebook/igl</p>
+<p><strong>rust编程语言</strong></p>
+<p>Omniverse Runs on RTX</p>
+<p>webGPU+RT: https://zhuanlan.zhihu.com/p/151023667</p>
+<p>https://www.stubbornhuang.com/1256/</p>
+<p>renderdoc可以查看gltf是否有重复实例化的信息，比如汽车轮毂</p>
+<p>其他推荐工具：https://developer.nvidia.com/nvidia-perfkit User Guide</p>
+<p>AI MIDDLEWARE SDK: Kynapse, Gameware Navigation</p>
+<p>https://www.youtube.com/watch?v=GK7ntA7ávk&amp;list=PLGvfHSgImk4ae9O7hLks6AJQTnQ3IIpDi</p>
+<p>https://www.youtube.com/watch?v=mUeNqLcx4eI</p>
+<p>https://www.youtube.com/watch?v=teg23SJlyl8</p>
+<p>https://www.youtube.com/watch?v=HtH1GMnZpgo&amp;list=PLAOytOz0HZbLaWhVrGEge_6dNCAzGFYH</p>
+<p>https://www.youtube.com/watch?v=70q9jtjWP4o</p>
+<p>https://www.youtube.com/watch?v=hRL56gXqj-4&amp;list=PLÚnPsAdxKWQYxkmQ3TdbLsyc1l2j25XM</p>
+<p>https://www.youtube.com/watch?v=DKrdLKetBZE</p>
+<p>https://www.youtube.com/watch?v=Gf5mMWHWNYc</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2023 <a href="https://github.com/QianyueW"  target="_blank" rel="noopener">Qianyue Wei</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/QianyueW" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/QianyueWei" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/qianyue-wei-065120193/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+    
+  </body>
+</html>
