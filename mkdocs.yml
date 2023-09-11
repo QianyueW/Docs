@@ -41,6 +41,7 @@ nav:
       - 引擎基础架构: engine/page1.md
       - 游戏世界构成: engine/page2.md
       - Render: engine/page3.md
+      - EGA读书笔记: engine/4.md
   - 算法与数据结构:
       - 编程题目总览: algorithm/main.md
       - 链表: algorithm/linkedlist.md

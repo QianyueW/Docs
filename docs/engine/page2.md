@@ -3,7 +3,7 @@
     - 动态物 Dynamic Game Objects
     - 静态物 Static Game Objects
     - 环境 Environments
-    - Other game objects: air wall, trigger Area...
+    - Other game objects: air wall, trigger Area 检测点...
 
 2. **component-based** instead of inheritance-based
    ![Component base in UE & Unity](../pictures/Component_base_in_UE&Unity.png)
